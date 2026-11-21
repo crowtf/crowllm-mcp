@@ -56,3 +56,9 @@ node index.js
 ## License
 
 MIT
+
+## Registry
+
+This repository carries a `server.json` manifest for the official MCP registry
+(`io.github.crowwdev/crowllm-mcp`, npm package `crowllm-mcp`, stdio transport). It becomes
+publishable once the npm package is released.
