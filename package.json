@@ -1,0 +1,33 @@
+{
+  "name": "crowllm-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for CrowLLM: search the model catalog, read pricing and chat through one OpenAI-compatible key.",
+  "type": "module",
+  "bin": {
+    "crowllm-mcp": "index.js"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "mcp",
+    "crowllm",
+    "llm",
+    "gateway",
+    "model-context-protocol"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^3.25.0"
+  }
+}
