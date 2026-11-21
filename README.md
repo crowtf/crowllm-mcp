@@ -20,6 +20,15 @@ or run without installing:
 npx -y crowllm-mcp
 ```
 
+or from a clone:
+
+```bash
+git clone https://github.com/crowwdev/crowllm-mcp.git
+cd crowllm-mcp
+npm install
+node index.js
+```
+
 ## Configure (Cline / Claude Desktop / any MCP client)
 
 ```json
