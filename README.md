@@ -20,6 +20,12 @@ or run without installing:
 npx -y crowllm-mcp
 ```
 
+Until the npm release is out, run the tagged build straight from GitHub:
+
+```bash
+npx -y github:crowwdev/crowllm-mcp#v0.1.0
+```
+
 or from a clone:
 
 ```bash
