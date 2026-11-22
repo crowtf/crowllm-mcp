@@ -1,0 +1,16 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - crowllmApiKey
+    properties:
+      crowllmApiKey:
+        type: string
+        description: CrowLLM API key (create one at https://crowllm.com)
+  commandFunction: |-
+    (config) => ({
+      command: 'npx',
+      args: ['-y', 'crowllm-mcp'],
+      env: { CROWLLM_API_KEY: config.crowllmApiKey }
+    })
