@@ -1,6 +1,6 @@
 # crowllm-mcp
 
-MCP server for [CrowLLM](https://crowllm.com), an OpenAI-compatible gateway with one key for 180+ models and a zero-rated `:free` shelf.
+MCP server for [CrowLLM](https://crowllm.com), an OpenAI-compatible gateway with one key for 180+ models and a `:free` shelf (31 of the 40 zero-rated on 2026-11-22).
 
 ## Tools
 
@@ -56,7 +56,7 @@ node index.js
 
 ## Notes
 
-- Use `search_models` with `free_only: true` to see ids that bill at zero.
+- Use `get_pricing` with `free_only: true` to see rows that bill at zero. `search_models`' `free_only` filters by the `:free` id suffix; most of those bill at zero, but a few are metered, so check `get_pricing` before relying on one.
 - Forked/free ids are rate-limited; use them for exploration rather than long loops.
 
 ## License
