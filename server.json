@@ -8,7 +8,7 @@
     "url": "https://github.com/crowwdev/crowllm-mcp",
     "source": "github"
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "packages": [
     {
       "registryType": "npm",
