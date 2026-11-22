@@ -44,10 +44,10 @@ server.registerTool(
   {
     title: "Search CrowLLM models",
     description:
-      "Search the live CrowLLM catalog (GET /v1/models). Optionally return only zero-rated ':free' ids.",
+      "Search the live CrowLLM catalog (GET /v1/models). Optionally return only ':free' ids (most, but not all, bill at zero - use get_pricing for the truly zero-rated rows).",
     inputSchema: {
       query: z.string().optional().describe("Substring to match against model ids"),
-      free_only: z.boolean().optional().describe("Only return ids ending in ':free'"),
+      free_only: z.boolean().optional().describe("Only return ids ending in ':free' (most bill at zero; not all do)"),
       limit: z.number().int().min(1).max(500).optional().describe("Maximum number of ids (default 100)"),
     },
   },
