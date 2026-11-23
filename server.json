@@ -5,7 +5,7 @@
   "title": "CrowLLM",
   "websiteUrl": "https://crowllm.com",
   "repository": {
-    "url": "https://github.com/crowwdev/crowllm-mcp",
+    "url": "https://github.com/crowtf/crowllm-mcp",
     "source": "github"
   },
   "version": "0.1.2",
