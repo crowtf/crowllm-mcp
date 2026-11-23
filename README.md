@@ -25,13 +25,13 @@ npx -y crowllm-mcp
 Until the npm release is out, run the tagged build straight from GitHub:
 
 ```bash
-npx -y github:crowwdev/crowllm-mcp#v0.1.0
+npx -y github:crowtf/crowllm-mcp#v0.1.0
 ```
 
 or from a clone:
 
 ```bash
-git clone https://github.com/crowwdev/crowllm-mcp.git
+git clone https://github.com/crowtf/crowllm-mcp.git
 cd crowllm-mcp
 npm install
 node index.js
@@ -68,5 +68,5 @@ MIT
 ## Registry
 
 This repository carries a `server.json` manifest for the official MCP registry
-(`io.github.crowwdev/crowllm-mcp`, npm package `crowllm-mcp`, stdio transport). It becomes
+(`io.github.crowtf/crowllm-mcp`, npm package `crowllm-mcp`, stdio transport). It becomes
 publishable once the npm package is released.
