@@ -30,5 +30,5 @@
     "@modelcontextprotocol/sdk": "^1.32.2",
     "zod": "^3.25.0"
   },
-  "mcpName": "io.github.crowwdev/crowllm-mcp"
+  "mcpName": "io.github.crowtf/crowllm-mcp"
 }
