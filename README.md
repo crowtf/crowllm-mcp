@@ -1,6 +1,6 @@
 # crowllm-mcp
 
-MCP server for [CrowLLM](https://crowllm.com), an OpenAI-compatible gateway with one key for 180+ models and a `:free` shelf (31 of the 40 zero-rated on 2026-11-22).
+MCP server for [CrowLLM](https://crowllm.com), an OpenAI-compatible gateway with one key for 170+ models and a `:free` shelf (31 of the 40 zero-rated on 2026-11-22).
 
 ## Tools
 
