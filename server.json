@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.crowwdev/crowllm-mcp",
+  "name": "io.github.crowtf/crowllm-mcp",
   "description": "Search CrowLLM models, read per-million-token prices, and run chat completions with one key.",
   "title": "CrowLLM",
   "websiteUrl": "https://crowllm.com",
