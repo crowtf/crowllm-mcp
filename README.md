@@ -1,5 +1,7 @@
 # crowllm-mcp
 
+[![crowllm-mcp MCP server](https://glama.ai/mcp/servers/@crowtf/crowllm-mcp/badge)](https://glama.ai/mcp/servers/@crowtf/crowllm-mcp)
+
 MCP server for [CrowLLM](https://crowllm.com), an OpenAI-compatible gateway with one key for models from several labs and a mostly zero-rated `:free` shelf (about 30 of ~40 ids; the shelf rotates).
 
 ## Tools
