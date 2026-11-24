@@ -71,7 +71,7 @@ The same host also serves Anthropic (`/v1/messages`, bare origin) and Gemini (`/
 
 - Gateway: https://crowllm.com · catalogue: https://crowllm.com/v1/models (no key)
 - Rates: https://crowllm.com/api/pricing (no key)
-- Official MCP registry: `io.github.crowtf/crowllm-mcp` (`server.json` in this repo, stdio transport)
+- MCP registry manifest: `server.json` in this repo targets `io.github.crowtf/crowllm-mcp` (stdio); the registry entry is published with the release workflow
 - Glama: https://glama.ai/mcp/servers/@crowtf/crowllm-mcp
 
 ## License
