@@ -74,6 +74,11 @@ The same host also serves Anthropic (`/v1/messages`, bare origin) and Gemini (`/
 - MCP registry manifest: `server.json` in this repo targets `io.github.crowtf/crowllm-mcp` (stdio); the registry entry is published with the release workflow
 - Glama: https://glama.ai/mcp/servers/@crowtf/crowllm-mcp
 
+## Releases
+
+See [Releases](https://github.com/crowtf/crowllm-mcp/releases) for version notes; the latest tag installs with `npx -y github:crowtf/crowllm-mcp#v0.1.2`.
+
+
 ## License
 
 MIT
