@@ -23,12 +23,24 @@
     "crowllm",
     "llm",
     "gateway",
-    "model-context-protocol"
+    "model-context-protocol",
+    "openai-compatible",
+    "ai-gateway",
+    "free-tier",
+    "llm-gateway"
   ],
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.2",
     "zod": "^3.25.0"
   },
-  "mcpName": "io.github.crowtf/crowllm-mcp"
+  "mcpName": "io.github.crowtf/crowllm-mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crowtf/crowllm-mcp.git"
+  },
+  "homepage": "https://crowllm.com",
+  "bugs": {
+    "url": "https://github.com/crowtf/crowllm-mcp/issues"
+  }
 }
