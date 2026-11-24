@@ -39,7 +39,7 @@ npx -y crowllm-mcp
 Prefer a pinned checkout? Use a tag:
 
 ```bash
-npx -y github:crowtf/crowllm-mcp#v0.1.0
+npx -y github:crowtf/crowllm-mcp#v0.1.2
 ```
 
 ## Configure (Cline / Claude Desktop / any MCP client)
