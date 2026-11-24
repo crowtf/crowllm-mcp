@@ -1,40 +1,45 @@
 # crowllm-mcp
 
 [![crowllm-mcp MCP server](https://glama.ai/mcp/servers/@crowtf/crowllm-mcp/badges/score.svg)](https://glama.ai/mcp/servers/@crowtf/crowllm-mcp)
+[![npm](https://img.shields.io/npm/v/crowllm-mcp.svg)](https://www.npmjs.com/package/crowllm-mcp)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-MCP server for [CrowLLM](https://crowllm.com), an OpenAI-compatible gateway with one key for models from several labs and a mostly zero-rated `:free` shelf (about 30 of ~40 ids; the shelf rotates).
+MCP server for [CrowLLM](https://crowllm.com), an OpenAI-compatible gateway: one key for models from several labs, plus a mostly zero-rated `:free` shelf (31 of the 39 free-suffixed ids bill nothing today — the shelf rotates, so ask the server rather than trusting a list).
+
+Works with any MCP client over stdio: Claude Desktop, Cline, Continue, Cherry Studio, LibreChat, and the rest.
 
 ## Tools
 
-- `search_models` — search the live catalog (`GET /v1/models`), optionally free ids only
-- `get_pricing` — list prices in USD per 1M tokens from `GET /api/pricing`
-- `chat` — send a prompt to any model through `POST /v1/chat/completions` and get the reply with usage
+| Tool | What it does | Key needed |
+| --- | --- | --- |
+| `search_models` | Search the live catalogue (`GET /v1/models`), optionally free ids only | no |
+| `get_pricing` | USD per 1M tokens for any model, from `GET /api/pricing` | no |
+| `chat` | Send a prompt through `POST /v1/chat/completions`, returns the reply and token usage | yes |
+
+Example prompts once installed:
+
+- "Which CrowLLM models are free right now, and what do they cost per million tokens?"
+- "Compare the input and output price of three long-context models on CrowLLM."
+- "Ask the cheapest free model to summarise this text."
 
 ## Install
+
+Published on npm — no build step:
 
 ```bash
 npm install -g crowllm-mcp
 ```
 
-or run without installing:
+or run it without installing:
 
 ```bash
 npx -y crowllm-mcp
 ```
 
-Until the npm release is out, run the tagged build straight from GitHub:
+Prefer a pinned checkout? Use a tag:
 
 ```bash
 npx -y github:crowtf/crowllm-mcp#v0.1.0
-```
-
-or from a clone:
-
-```bash
-git clone https://github.com/crowtf/crowllm-mcp.git
-cd crowllm-mcp
-npm install
-node index.js
 ```
 
 ## Configure (Cline / Claude Desktop / any MCP client)
@@ -56,17 +61,19 @@ node index.js
 - `CROWLLM_API_KEY` — created at [crowllm.com](https://crowllm.com); required for `chat`, optional for `search_models` and `get_pricing`
 - `CROWLLM_BASE_URL` — optional, defaults to `https://crowllm.com`
 
-## Notes
+## Free tier
 
-- Use `get_pricing` with `free_only: true` to see rows that bill at zero. `search_models`' `free_only` filters by the `:free` id suffix; most of those bill at zero, but a few are metered, so check `get_pricing` before relying on one.
-- Forked/free ids are rate-limited; use them for exploration rather than long loops.
+`search_models`' `free_only` filters by the `:free` id suffix. Most of those ids bill at zero, but a few are metered, so check `get_pricing` (or call it with `free_only: true`) before relying on one. Free ids are rate-limited — good for exploration, not for long agent loops.
+
+The same host also serves Anthropic (`/v1/messages`, bare origin) and Gemini (`/v1beta`) wire shapes; this package speaks the OpenAI shape.
+
+## Links
+
+- Gateway: https://crowllm.com · catalogue: https://crowllm.com/v1/models (no key)
+- Rates: https://crowllm.com/api/pricing (no key)
+- Official MCP registry: `io.github.crowtf/crowllm-mcp` (`server.json` in this repo, stdio transport)
+- Glama: https://glama.ai/mcp/servers/@crowtf/crowllm-mcp
 
 ## License
 
 MIT
-
-## Registry
-
-This repository carries a `server.json` manifest for the official MCP registry
-(`io.github.crowtf/crowllm-mcp`, npm package `crowllm-mcp`, stdio transport). It becomes
-publishable once the npm package is released.
